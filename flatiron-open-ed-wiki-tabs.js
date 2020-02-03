@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Open tabs in ed team wiki
 // @namespace    https://github.com/amelieoller/tampermonkey
-// @version      0.2
-// @description  This script opens the tabs for each mod and week based on which one your cohort is in at the moment
+// @version      0.3
+// @description  This script opens the page that corresponds to which mod and week your cohort is in at the moment
 // @author       amelieoller
 // @match        https://education-team-wiki.herokuapp.com/
 // @grant        none
@@ -14,6 +14,7 @@
   'use strict';
   // Your cohort's start date
   const myCohortStartDate = new Date('2019-12-17');
+
   // Mods 1-4 days and names (as they appear in the wiki)
   const mods = [
     { days: 21, name: 'Module 1' },
