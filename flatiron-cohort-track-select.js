@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open tabs on curriculum tracks page and select cohort
 // @namespace    https://github.com/amelieoller/tampermonkey
-// @version      0.1
+// @version      0.2
 // @description  This script opens each tab once the page is loaded and selects your desired cohort
 // @author       amelieoller
 // @match        https://learn.co/curriculum/tracks/*
