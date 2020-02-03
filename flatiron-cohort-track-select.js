@@ -6,8 +6,8 @@
 // @author       amelieoller
 // @match        https://learn.co/curriculum/tracks/*
 // @grant        none
-// @downloadURL  https://github.com/amelieoller/tampermonkey/flatiron-cohort-track-select.js
-// @updateURL    https://github.com/amelieoller/tampermonkey/flatiron-cohort-track-select.js
+// @downloadURL  https://github.com/amelieoller/tampermonkey/blob/master/flatiron-cohort-track-select.js
+// @updateURL    https://github.com/amelieoller/tampermonkey/blob/master/flatiron-cohort-track-select.js
 // ==/UserScript==
 
 (function() {
