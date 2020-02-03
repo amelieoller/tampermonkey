@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open tabs on curriculum tracks page and select cohort
 // @namespace    https://github.com/amelieoller/tampermonkey
-// @version      0.2
+// @version      0.3
 // @description  This script opens each tab once the page is loaded and selects your desired cohort
 // @author       amelieoller
 // @match        https://learn.co/curriculum/tracks/*
@@ -22,7 +22,7 @@
   const config = { childList: true, subtree: true };
 
   // Callback function to execute when mutations are observed
-  const callback = function(mutationsList, observer) {
+  const observerCallback = function(mutationsList, observer) {
     // Use traditional 'for loops' for IE 11
     for (let mutation of mutationsList) {
       // Wait for list to be loaded
@@ -52,7 +52,7 @@
   };
 
   // Create an observer instance linked to the callback function
-  const observer = new MutationObserver(callback);
+  const observer = new MutationObserver(observerCallback);
 
   // Start observing the target node for configured mutations
   observer.observe(targetNode, config);
