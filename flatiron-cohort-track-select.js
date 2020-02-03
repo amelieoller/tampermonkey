@@ -25,24 +25,25 @@
   const callback = function(mutationsList, observer) {
     // Use traditional 'for loops' for IE 11
     for (let mutation of mutationsList) {
+      // Wait for list to be loaded
       if (mutation.addedNodes[0].id === 'track-explorer-layout') {
-        console.log('A child node has been added or removed.' + mutation);
-        [
-          ...document.getElementsByClassName(
-            'arrow-icon icon-padded-right collapsable-toggle pointer-cursor'
-          )
-        ].forEach(el => el.click());
+        // Select cohort dropdown
+        const cohortDropdown = document.getElementsByClassName('batches')[0];
 
-        const index = [...document.getElementsByClassName('batches')[0].options]
+        // Select each arrow and "click" to open content
+        [...document.getElementsByClassName('arrow-icon')].forEach(el => el.click());
+
+        // Get index of cohort from dropdown
+        const cohortIndex = [...cohortDropdown.options]
           .map(option => option.label)
           .indexOf(myCohort);
 
-        document.getElementsByClassName('batches')[0].getElementsByTagName('option')[
-          index
-        ].selected = true;
-        const element = document.getElementsByClassName('batches')[0];
-        const event = new Event('change', { bubbles: true });
-        element.dispatchEvent(event);
+        // Select cohort index
+        cohortDropdown.getElementsByTagName('option')[cohortIndex].selected = true;
+
+        // Bubble up change event to make selection
+        const dropdownChangeEvent = new Event('change', { bubbles: true });
+        cohortDropdown.dispatchEvent(dropdownChangeEvent);
 
         // Stop observing
         observer.disconnect();
