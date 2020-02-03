@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Open tabs on curriculum tracks page and select cohort
 // @namespace    https://github.com/amelieoller/tampermonkey
-// @version      0.3
+// @version      0.2
 // @description  This script opens each tab once the page is loaded and selects your desired cohort
 // @author       amelieoller
 // @match        https://learn.co/curriculum/tracks/*
 // @grant        none
-// @downloadURL  https://github.com/amelieoller/tampermonkey/blob/master/flatiron-cohort-track-select.js
-// @updateURL    https://github.com/amelieoller/tampermonkey/blob/master/flatiron-cohort-track-select.js
+// @downloadURL  https://raw.githubusercontent.com/amelieoller/tampermonkey/master/flatiron-cohort-track-select.js
+// @updateURL    https://raw.githubusercontent.com/amelieoller/tampermonkey/master/flatiron-cohort-track-select.js
 // ==/UserScript==
 
 (function() {
